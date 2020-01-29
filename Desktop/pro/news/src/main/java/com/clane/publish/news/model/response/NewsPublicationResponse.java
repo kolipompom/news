@@ -23,6 +23,7 @@ public class NewsPublicationResponse {
     private String news;
     private String description;
     private Status status;
+    private String uniqueKey;
     private String createdAt;
     private String updatedAt;
 
@@ -31,6 +32,7 @@ public class NewsPublicationResponse {
                 .news(publishedNews.getFile())
                 .description(publishedNews.getDescription())
                 .status(publishedNews.getStatus())
+                .uniqueKey(publishedNews.getUniqueKey())
                 .createdAt(TimeUtil.getIsoTime(publishedNews.getCreatedAt()))
                 .updatedAt(TimeUtil.getIsoTime(publishedNews.getUpdatedAt()))
                 .build();
